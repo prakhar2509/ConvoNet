@@ -38,9 +38,9 @@ Before building ConvoNet, ensure you have the following installed:
 
 ### Installing Dependencies
 
-#### Ubuntu/Debiansudo apt update
+#### Ubuntu/Debian sudo apt update
 sudo apt install build-essential cmake ninja-build libssl-dev
-#### CentOS/RHEL/Fedorasudo yum groupinstall "Development Tools"
+#### CentOS/RHEL/Fedora sudo yum groupinstall "Development Tools"
 sudo yum install cmake ninja-build openssl-devel
 #### macOS (with Homebrew)brew install cmake ninja openssl
 #### Windows
@@ -51,7 +51,7 @@ sudo yum install cmake ninja-build openssl-devel
 
 ## Installation & Build
 
-### Step 1: Clone the Repositorygit clone https://github.com/yourusername/ConvoNet.git
+### Step 1: Clone the Repository - git clone https://github.com/yourusername/ConvoNet.git
 cd ConvoNet
 ### Step 2: Generate SSL Certificates
 Before running the server, you need to generate SSL certificates. Navigate to the `server/` directory:cd server
@@ -71,7 +71,7 @@ make -C build
 #### Windows Build Notes
 If OpenSSL is installed in a custom location:cmake -DOPENSSL_ROOT_DIR="C:\Program Files\OpenSSL-Win64" -B build
 cmake --build build
-## Usage
+
 
 ### Starting the Server
 From the build directory:./server
