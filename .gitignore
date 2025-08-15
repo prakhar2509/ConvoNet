@@ -30,10 +30,9 @@ rules.ninja
 *.exe
 *.out
 *.app
-server
-client
-server.exe
-client.exe
+# NOTE: The generic 'server' and 'client' lines were removed
+# because they were hiding your source code directories.
+# The '*.exe' rule above is sufficient to ignore the executables.
 
 # Object files
 *.o
@@ -56,12 +55,9 @@ client.exe
 *.ilk
 
 # SSL Certificates (if auto-generated)
-# Uncomment if you don't want to track certificates
-# *.pem
-# *.crt
-# *.key
-# cert.pem
-# key.pem
+# It's good practice to not commit private keys.
+# If you generate these in your source folder, keep them ignored.
+key.pem
 
 # Visual Studio files
 .vs/
@@ -81,7 +77,6 @@ client.exe
 
 # CLion
 .idea/
-cmake-build-*/
 
 # Qt Creator
 CMakeLists.txt.user*
@@ -114,72 +109,4 @@ desktop.ini
 core
 core.*
 
-# Package files
-*.tar.gz
-*.zip
-*.7z
-*.rar
-
-# Windows specific
-*.lnk
-$RECYCLE.BIN/
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-
-# macOS specific
-.AppleDouble
-.LSOverride
-Icon
-._*
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Linux specific
-*~
-.fuse_hidden*
-.directory
-.Trash-*
-.nfs*
-
-# Backup files
-*.bak
-*.backup
-*.old
-*.orig
-
-# OpenSSL build artifacts (if building OpenSSL from source)
-openssl/
-ssl/
-
-# Conan (if used)
-conandata.txt
-conanfile.txt
-conaninfo.txt
-conanbuildinfo.*
-
-# vcpkg (if used)
-vcpkg_installed/
-.vcpkg-root
-
-# Generated documentation
-docs/html/
-docs/latex/
-*.pdf
-
-# Test results
-test_results/
-Testing/
-
-# Profiling data
-*.gcda
-*.gcno
-*.gcov
-gmon.out
+*.pem
