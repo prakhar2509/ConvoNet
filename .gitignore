@@ -1,0 +1,185 @@
+# Build directories
+build/
+out/
+cmake-build-*/
+Debug/
+Release/
+RelWithDebInfo/
+MinSizeRel/
+x64/
+x86/
+Win32/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Ninja build files
+.ninja_deps
+.ninja_log
+build.ninja
+rules.ninja
+
+# Executables
+*.exe
+*.out
+*.app
+server
+client
+server.exe
+client.exe
+
+# Object files
+*.o
+*.obj
+*.lo
+*.slo
+*.ko
+*.elf
+
+# Libraries
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exp
+*.pdb
+*.idb
+*.ilk
+
+# SSL Certificates (if auto-generated)
+# Uncomment if you don't want to track certificates
+# *.pem
+# *.crt
+# *.key
+# cert.pem
+# key.pem
+
+# Visual Studio files
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcpkg.user
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# CLion
+.idea/
+cmake-build-*/
+
+# Qt Creator
+CMakeLists.txt.user*
+*.pro.user*
+
+# Eclipse CDT
+.cproject
+.project
+.settings/
+
+# Code::Blocks
+*.cbp
+*.layout
+*.depend
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Core dumps
+core
+core.*
+
+# Package files
+*.tar.gz
+*.zip
+*.7z
+*.rar
+
+# Windows specific
+*.lnk
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# macOS specific
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Linux specific
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# OpenSSL build artifacts (if building OpenSSL from source)
+openssl/
+ssl/
+
+# Conan (if used)
+conandata.txt
+conanfile.txt
+conaninfo.txt
+conanbuildinfo.*
+
+# vcpkg (if used)
+vcpkg_installed/
+.vcpkg-root
+
+# Generated documentation
+docs/html/
+docs/latex/
+*.pdf
+
+# Test results
+test_results/
+Testing/
+
+# Profiling data
+*.gcda
+*.gcno
+*.gcov
+gmon.out
