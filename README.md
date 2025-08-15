@@ -247,4 +247,8 @@ If you encounter any issues or have questions:
 
 ---
 
+<<<<<<< HEAD
 **Made with ❤️ by [prakhar2509](https://github.com/prakhar2509)**
+=======
+**Made with ❤️ by [prakhar2509](https://github.com/prakhar2509)**
+>>>>>>> 0361b230430d205f39eb0025fce9f8ce3a643481

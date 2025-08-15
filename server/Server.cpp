@@ -193,10 +193,10 @@ void Server::handleClient(int client_socket, SSL* ssl) {
             // Private message logic can be expanded here
         }
         else {
-            // DON'T send message back to sender - let client handle it
-            // Only send the message with username to everyone else
+            
+            // Send the message with username to everyone else
             std::string broadcast_msg = username + ": " + message;
-            broadcastMessage(broadcast_msg, ssl); // EXCLUDE the sender
+            broadcastMessage(broadcast_msg, nullptr); // Pass sender_ssl to exclude them
         }
     }
 
@@ -211,14 +211,11 @@ void Server::handleClient(int client_socket, SSL* ssl) {
 void Server::broadcastMessage(const std::string& message, SSL* sender_ssl) {
     std::lock_guard<std::mutex> lock(clients_mutex);
     std::string formatted_message = message + "\n";
-    
     for (const auto& client : clients) {
-        // Send to all clients EXCEPT the sender
-        if (sender_ssl == nullptr || client.ssl != sender_ssl) {
-            SSL_write(client.ssl, formatted_message.c_str(), formatted_message.length());
-        }
+        SSL_write(client.ssl, formatted_message.c_str(), formatted_message.length());
     }
 }
+
 
 void Server::send_private_message(const std::string& message, const std::string& recipient_username, SSL* sender_ssl) {
     // Implementation later

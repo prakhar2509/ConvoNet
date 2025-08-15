@@ -142,9 +142,6 @@ void Client::send_messages() {
     std::string line;
     while (std::getline(std::cin, line)) {
         if (!line.empty()) {
-            // Show user's own message without username prefix
-            std::cout << line << std::endl;
-            
             // Send to server
             SSL_write(ssl, line.c_str(), line.length());
         }
