@@ -221,7 +221,7 @@ void Server::broadcastMessage(const std::string& message, SSL* sender_ssl) {
 }
 
 void Server::send_private_message(const std::string& message, const std::string& recipient_username, SSL* sender_ssl) {
-    // Implementation left as an exercise
+    // Implementation later
 }
 
 void Server::removeClient(SSL* client_ssl) {
